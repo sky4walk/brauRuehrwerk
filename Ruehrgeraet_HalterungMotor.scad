@@ -29,5 +29,8 @@ module klappe() {
  }
 }
 
-klappe();
-motorBefestigung();
+// Motorbefestigung
+projection() motorBefestigung();
+
+// Klappe mit scharnieren daran befestigen
+//projection() klappe();
