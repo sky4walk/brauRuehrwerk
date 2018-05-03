@@ -12,3 +12,5 @@ motorBohrRadius = 30;
 motorBohrWinkel = 120;
 schraubeBohrloch = 6;
 sensorBohrloch = 10;
+
+$fn=100; 
