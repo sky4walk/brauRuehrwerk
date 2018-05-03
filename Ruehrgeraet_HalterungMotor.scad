@@ -20,6 +20,9 @@ module motorBefestigung() {
       // Motorwelle
       translate([0,0,-1])  
         cylinder(platteDicke+2,motorBohrloch/2,motorBohrloch/2,false);
+      // Temperatursensor Tauchhuelse
+      translate([topfDurchmesser/4,0,-1])  
+        cylinder(platteDicke+2,sensorBohrloch/2,sensorBohrloch/2,false);
       // Motor  Befestigung
       translate([0,-motorBohrRadius,-1])  
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);
@@ -39,7 +42,7 @@ module motorBefestigung() {
     }
 }
 
-// 2D Projektion fuer SVG Datei
+// 2D Projektion fuer SVG/DXF Datei
 projection() 
 { 
 // Motorbefestigung
