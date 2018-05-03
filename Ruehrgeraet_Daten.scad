@@ -7,10 +7,10 @@ henkelBreite = 130;
 henkelDicke = 10;
 henkelUeber = 20;
 henkelDurchmesser = 550;
-motorBohrloch = 20;
-motorBohrRadius = 30;
+motorBohrloch = 19;
+motorBohrRadius = 25;
 motorBohrWinkel = 120;
-schraubeBohrloch = 6;
+schraubeBohrloch = 8;
 sensorBohrloch = 10;
 
 $fn=100; 
