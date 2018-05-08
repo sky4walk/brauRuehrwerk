@@ -3,6 +3,9 @@
 
 platteDicke = 8;
 topfDurchmesser = 480;
+topfDurchmesserInnen = 450;
+topfHoehe = 300;
+fluegelHoehe = 100;
 henkelBreite = 130;
 henkelDicke = 10;
 henkelUeber = 20;
