@@ -4,13 +4,14 @@
 include <Ruehrgeraet_Daten.scad>
 
 module fluegel() {
-    fluegelScale = 1.5;
-    translate([-topfDurchmesserInnen/2,-fluegelHoehe/2,0])  
-      cube([topfDurchmesserInnen,fluegelHoehe,platteDicke],false);
-    translate([-topfDurchmesserInnen/2,fluegelHoehe/2,0])  
-      cube([fluegelHoehe*fluegelScale,fluegelHoehe,platteDicke],false);
-    translate([topfDurchmesserInnen/2-fluegelHoehe*fluegelScale,fluegelHoehe/2,0])  
-      cube([fluegelHoehe*fluegelScale,fluegelHoehe,platteDicke],false);
+    fluegelBreite = topfDurchmesserInnen - 80; 
+    fluegelScale = fluegelBreite / 3 / fluegelHoehe;
+    translate([-fluegelBreite/2,-fluegelHoehe/2,0])  
+      cube([fluegelBreite,fluegelHoehe,platteDicke],false);
+    translate([-fluegelBreite/2,fluegelHoehe/2,0])  
+      cube([fluegelHoehe*fluegelScale,fluegelHoehe/2,platteDicke],false);
+    translate([fluegelBreite/2-fluegelHoehe*fluegelScale,fluegelHoehe/2,0])  
+      cube([fluegelHoehe*fluegelScale,fluegelHoehe/2,platteDicke],false);
     
 
 }
