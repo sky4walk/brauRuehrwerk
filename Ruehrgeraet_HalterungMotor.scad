@@ -30,16 +30,30 @@ module motorBefestigung() {
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);
       translate([-motorBohrPosX,motorBohrPosY,-1])  
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);
-      // Halterungsschrauben
-      translate([-topfDurchmesser/2,-henkelBreite/2-henkelUeber/2,-1])  
+        
+    // Halterungsschrauben
+    schraubXPos = pow(topfDurchmesser/2*topfDurchmesser/2 - henkelBreite/2*henkelBreite/2,0.5);
+    translate([-schraubXPos,-henkelBreite/2-henkelUeber/2,-1])  
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);
-      translate([-topfDurchmesser/2,henkelBreite/2+henkelUeber/2,-1])  
+      translate([-schraubXPos,henkelBreite/2+henkelUeber/2,-1])  
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);        
-      translate([topfDurchmesser/2,-henkelBreite/2-henkelUeber/2,-1])  
+      translate([schraubXPos,-henkelBreite/2-henkelUeber/2,-1])  
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);
-      translate([topfDurchmesser/2,henkelBreite/2+henkelUeber/2,-1])  
+      translate([schraubXPos,henkelBreite/2+henkelUeber/2,-1])  
         cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);        
-    }
+
+    //Scharnier
+      translate([scharnierPosMitte,-henkelBreite/2-henkelUeber+scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
+      translate([scharnierPosMitte+scharnierAbstandLoch,-henkelBreite/2-henkelUeber+scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);
+      translate([-scharnierPosMitte,-henkelBreite/2-henkelUeber+scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
+      translate([-scharnierPosMitte-scharnierAbstandLoch,-henkelBreite/2-henkelUeber+scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);        
+    
+    
+    }    
 }
 
 // 2D Projektion fuer SVG/DXF Datei

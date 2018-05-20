@@ -1,7 +1,7 @@
 // Andre Betz
 // github@AndreBetz.de
 
-platteDicke = 8;
+platteDicke = 3;
 topfDurchmesser = 480;
 topfDurchmesserInnen = 450;
 topfHoehe = 300;
@@ -15,5 +15,10 @@ motorBohrRadius = 25;
 motorBohrWinkel = 120;
 schraubeBohrloch = 6;
 sensorBohrloch = 21;
+schraubeBohrlochM5 = 4.2;
+abstandGriff = 96;
+scharnierAbstandLoch = 35;
+scharnierHoehe = 8;
+scharnierPosMitte = 100;
 
 $fn=100; 
