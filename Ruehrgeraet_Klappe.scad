@@ -12,7 +12,17 @@ module klappe() {
    translate([abstandGriff/2,-topfDurchmesser/2+topfDurchmesser/2/5,-1])  
      cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);  
    translate([-abstandGriff/2,-topfDurchmesser/2+topfDurchmesser/2/5,-1])  
-     cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);  
+     cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);
+   //Scharnier
+      translate([scharnierPosMitte,-henkelBreite/2-henkelUeber-scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
+      translate([scharnierPosMitte+scharnierAbstandLoch,-henkelBreite/2-henkelUeber-scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);
+      translate([-scharnierPosMitte,-henkelBreite/2-henkelUeber-scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
+      translate([-scharnierPosMitte-scharnierAbstandLoch,-henkelBreite/2-henkelUeber-scharnierHoehe,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
+     
  }
 }
 
