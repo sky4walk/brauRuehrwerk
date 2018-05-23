@@ -28,9 +28,14 @@ module fluegelBohrung() {
         // ausschnitt
         ausschnittScale = 3.5;
         translate([-fluegelBreite/2.5,-fluegelHoehe/4,0])  
-          cube([fluegelBreite/ausschnittScale,fluegelHoehe*1.5/ausschnittScale,platteDicke],false);
+          cube([fluegelBreite/ausschnittScale,fluegelHoehe/ausschnittScale,platteDicke],false);
         translate([fluegelBreite/2.5-fluegelBreite/ausschnittScale,-fluegelHoehe/4,0])  
-          cube([fluegelBreite/ausschnittScale,fluegelHoehe*1.5/ausschnittScale,platteDicke],false);    
+          cube([fluegelBreite/ausschnittScale,fluegelHoehe/ausschnittScale,platteDicke],false);    
+        
+        // Schleppkette befestigung
+        translate([-fluegelBreite/2+10,-fluegelHoehe/2+10,0])  
+          cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);    translate([fluegelBreite/2-10,-fluegelHoehe/2+10,0])  
+          cylinder(platteDicke+2,schraubeBohrloch/2,schraubeBohrloch/2,false);        
         }
 }
 // 2D Projektion fuer SVG Datei
