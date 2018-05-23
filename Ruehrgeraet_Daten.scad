@@ -20,5 +20,7 @@ abstandGriff = 96;
 scharnierAbstandLoch = 35;
 scharnierHoehe = 8;
 scharnierPosMitte = 100;
+spielAbstand = 0.5;
+stoerBlechLaenge = 300;
 
 $fn=100; 

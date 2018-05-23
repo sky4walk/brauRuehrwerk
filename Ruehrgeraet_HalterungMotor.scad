@@ -50,10 +50,25 @@ module motorBefestigung() {
       translate([-scharnierPosMitte,-henkelBreite/2-henkelUeber+scharnierHoehe,-1])  
         cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
       translate([-scharnierPosMitte-scharnierAbstandLoch,-henkelBreite/2-henkelUeber+scharnierHoehe,-1])  
-        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);        
-    
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);      
+      
+    //Gegenruehrer Halterung
+      translate([-scharnierPosMitte,-henkelBreite/3,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false); 
+      translate([-scharnierPosMitte-scharnierAbstandLoch,-henkelBreite/3,-1])  
+        cylinder(platteDicke+2,schraubeBohrlochM5/2,schraubeBohrlochM5/2,false);      
     
     }    
+    // halterung ohne scharnier    
+    translate([scharnierPosMitte+scharnierAbstandLoch/4+spielAbstand,-henkelBreite/2-henkelUeber-scharnierAbstandLoch/5*4,-1])
+      cube([scharnierAbstandLoch/2-spielAbstand*2,scharnierAbstandLoch/5*4,platteDicke+2],false); 
+    translate([scharnierPosMitte+spielAbstand,-henkelBreite/2-henkelUeber-scharnierAbstandLoch/5*4,-1])
+      cube([scharnierAbstandLoch-spielAbstand*2,scharnierAbstandLoch/4-spielAbstand,platteDicke+2],false);
+      
+    translate([-scharnierPosMitte-scharnierAbstandLoch/4*3+spielAbstand,-henkelBreite/2-henkelUeber-scharnierAbstandLoch/5*4,-1])
+      cube([scharnierAbstandLoch/2-spielAbstand*2,scharnierAbstandLoch/5*4,platteDicke+2],false); 
+    translate([-scharnierPosMitte-scharnierAbstandLoch+spielAbstand,-henkelBreite/2-henkelUeber-scharnierAbstandLoch/5*4,-1])
+      cube([scharnierAbstandLoch-spielAbstand*2,scharnierAbstandLoch/4-spielAbstand,platteDicke+2],false);       
 }
 
 // 2D Projektion fuer SVG/DXF Datei
